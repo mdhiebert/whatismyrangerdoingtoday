@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    background-color: #37474F;
+}
+
+.main-title {
+    color: #FFD740;
+}
+
+.mat-card {
+    background-color: #607D8B;
+    color: whitesmoke;
+}
+
+.mat-card-subtitle {
+    color: #FFFF00;
+}
+
+.mat-divider {
+    border-top-color: #455A64;
+}
+.mat-progress-bar-buffer {
+    background-color: #616161;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #FFC107;
+}
+
+.mat-datepicker-toggle-active {
+    color: #FFD740;
+}
+
+.mat-calendar-body-selected {
+    background-color: #FFD740;
+    color: #fff;
+}
+
+.mat-calendar-body-today {
+    background-color: rgba(200, 166, 13, 0.3);
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-comparison-identical) {
+    background-color: rgba(200, 166, 13, 0.3);
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: rgba(200, 166, 13, 0.3);
+}
