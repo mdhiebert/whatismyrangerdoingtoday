@@ -1,0 +1,86 @@
+<mat-card class="warning-card">
+    <mat-card-title>Important Notes</mat-card-title>
+    <mat-card-content>
+        <p>To prevent delays for student mail, the use of Federal Express (FEDEX) and United Parcel Service (UPS) is recommended when shipping mail to the Mountain and Florida addresses. Shipping through the United States Postal Service (USPS) is found to cause delays in shipments resulting in untimely deliveries.</p>
+
+        <p>Any item(s) acquired through the mail system, 8 hour pass or otherwise that are not on the official ARTB (Brigade) packing list as required or optional, will not be stored for students nor is it the responsibility of the ARTB and Cadre. These will be discarded by the Ranger Student regardless of monetary or sentimental value.</p>
+    </mat-card-content>
+</mat-card>
+
+<mat-divider></mat-divider>
+
+<mat-card>
+    <mat-card-title>Mail Information</mat-card-title>
+    <mat-card-content>
+        <ol>
+            <li>Mail packages will be no larger than 12 x 12 x 5 ½ (USPS Large Flat Rate)</li>
+            <li>Anything larger than 12 x 12 x 5 ½ in size will not be opened and immediately be sent back to the sender by the mail clerk</li>
+            <li>Only items listed on the packing list as authorized or optional may be kept by the student throughout the duration of the Ranger Course</li>
+            <li>ARTB does not have the capacity to facilitate storage for unauthorized material for students</li>
+            <li>All items that are considered unauthorized or contraband for the Ranger Course will be consensually thrown away by the student</li>
+        </ol>
+
+        
+        <div style="text-align: center;">
+            My Ranger is...
+            
+            <mat-select matInput placeholder="Rank" [(value)]="rank" style="width: 10ch;">
+                <mat-option *ngFor="let rankName of rankList" [value]="rankName">{{rankName}}</mat-option>
+            </mat-select>
+            &nbsp;
+            <input matInput placeholder="First Name" [(ngModel)]="firstName" style="width: 15ch;">
+            <input matInput placeholder="Last Name" [(ngModel)]="lastName" style="width: 15ch;">
+
+            <br>
+
+            They are in company... &nbsp;
+
+            <mat-select matInput placeholder="Company" [(value)]="company" style="width: 10ch">
+                <mat-option *ngFor="let company of companyList" [value]="company">{{company}}</mat-option>
+            </mat-select>
+
+            <br>
+
+            They are in class... &nbsp;
+
+            <mat-select matInput placeholder="Class" [(value)]="class" style="width: 10ch">
+                <mat-option *ngFor="let cycle of cycleList" [value]="cycle.title">{{cycle.title}}</mat-option>
+            </mat-select>
+        </div>
+
+        <hr>
+
+        <table style="text-align: center; width: 100%;">
+            <tr>
+                <th>Fort Benning Address</th>
+                <th>Mountain Address</th>
+                <th>Florida Address</th>
+            </tr>
+            <tr>
+                <td>
+                    {{rank}} {{firstName}} {{lastName}}
+                    <br>4th Ranger Training Battalion
+                    <br>ATTN: Class {{class}}, {{company}} CO
+                    <br>10850 Schneider Road
+                    <br>Fort Benning, GA 31905
+                </td>
+                <td>
+                    {{rank}} {{firstName}} {{lastName}}
+                    <br>5th Ranger Training Battalion
+                    <br>ATTN: Class {{class}}, {{company}} CO
+                    <br>1 Camp Merrill
+                    <br>Dahlonega, GA 30533-1802
+                </td>
+                <td>
+                    {{rank}} {{firstName}} {{lastName}}
+                    <br>6th Ranger Training Battalion
+                    <br>ATTN: Class {{class}}, {{company}} CO
+                    <br>6069 Walkers Lane
+                    <br>Camp James E. Rudder
+                    <br>Eglin AFB, FL 32542
+                </td>
+            </tr>
+        </table>
+
+    </mat-card-content>
+</mat-card>

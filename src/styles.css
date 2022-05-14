@@ -4,6 +4,7 @@ html {
 
 .main-title {
     color: #FFD740;
+    text-align: center;
 }
 
 .mat-card {
@@ -45,4 +46,21 @@ html {
 
 .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
     background-color: rgba(200, 166, 13, 0.3);
+}
+
+footer {
+    text-align: center;
+    color: #fff
+}
+
+a:link {
+    color: #FFD740;
+}
+
+a:visited {
+    color: rgba(200, 166, 13, 0.3);
+}
+
+a:active {
+    color: #fff;
 }

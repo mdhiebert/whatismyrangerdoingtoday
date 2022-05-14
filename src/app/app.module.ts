@@ -12,14 +12,32 @@ import { MatListModule } from '@angular/material/list'
 import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTreeModule } from '@angular/material/tree'
+
+import { RouterModule, Routes } from '@angular/router'
+import { RangerScheduleComponent } from './ranger-schedule/ranger-schedule.component';
+import { AboutComponent } from './about/about.component';
+import { LettersComponent } from './letters/letters.component';
+
+const routes: Routes = [
+  { path: 'schedule', component: RangerScheduleComponent },
+  { path: 'letters', component: LettersComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '', redirectTo: 'schedule', pathMatch: 'full' },
+]
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, RangerScheduleComponent, AboutComponent, LettersComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
@@ -28,7 +46,12 @@ import { MatDividerModule } from '@angular/material/divider';
     MatListModule,
     MatProgressBarModule,
     FormsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
